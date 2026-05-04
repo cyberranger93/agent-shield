@@ -1,0 +1,60 @@
+{
+  "name": "agent-shield",
+  "version": "0.1.0",
+  "description": "AI Agent Security Toolkit — scan prompts, agents, and MCP servers for vulnerabilities",
+  "type": "module",
+  "bin": {
+    "agent-shield": "./dist/cli/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai-security",
+    "prompt-injection",
+    "jailbreak-detection",
+    "mcp-security",
+    "agent-security",
+    "llm-security",
+    "red-team",
+    "cybersecurity"
+  ],
+  "author": "Yathavan G <yathavang1@gmail.com> (https://cyberarc.co)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyberranger93/agent-shield"
+  },
+  "homepage": "https://github.com/cyberranger93/agent-shield#readme",
+  "bugs": {
+    "url": "https://github.com/cyberranger93/agent-shield/issues"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.0",
+    "table": "^6.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "tsx": "^4.7.0",
+    "vitest": "^1.4.0",
+    "@types/node": "^20.11.0"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}
